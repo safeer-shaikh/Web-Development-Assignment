@@ -9,6 +9,30 @@
 	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
+<script>
+	var i = 0;
+	var images = [];
+	var time = 2000;
+
+	images[0] = 'image/BloodBank_Slider.jpg';
+	images[1] = 'image/ehsaas&saylani.jpeg';
+	images[2] = 'image/Corona Banner.jpeg';
+
+	function changeImg(){
+		document.slide.src = images[i];
+
+		if(i < images.length - 1){
+			i++;
+		}else{
+			i = 0;
+		}
+
+		setTimeout("changeImg()", time);
+	}
+	window.onload = changeImg;
+
+</script>
+
 <body>
 	<div class="topbar">
 		<div class="container">
@@ -116,9 +140,13 @@
 
 	</div> -->
 
-	<div class="home-img">
-		<img src="image/ehsaas&saylani.jpeg" class="picture" width="100%">
+	<div>
+		<img name="slide" width="100%">
 	</div>
+
+	<!-- <div class="home-img">
+		<img src="image/ehsaas&saylani.jpeg" class="picture" width="100%">
+	</div> -->
 
 	<!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   		<div class="carousel-inner">
